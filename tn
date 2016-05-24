@@ -1,0 +1,15 @@
+#!/bin/bash
+# meter -x para fazer debug
+
+# script para tirar notas
+
+date=$(date)
+topico="$1"
+set -x
+filename="${topico}notes.txt"
+set +x
+
+read -p "Passa para cá a nota: " note
+
+echo $date: $note >> "./$filename"
+echo "Nota '$note' guardada em $filename" 
